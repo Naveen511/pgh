@@ -1,0 +1,36 @@
+<div class="col-md-6">
+  <h3>Add User</h3>
+<form class="fform-horizontal">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" [(ngModel)]="user.email_id" placeholder="Email" 
+    	name="email_id" class="form-control" id="email_id">
+  </div>
+
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input [(ngModel)]="user.first_name" placeholder="First Name" 
+    	name="first_name" class="form-control" id="first_name">
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+   	<input [(ngModel)]="user.last_name" placeholder="Last name" 
+		name="last_name" class="form-control" id="last_name">
+  </div>
+  
+  <div class="form-group">
+    <label for="userName">User Name:</label>
+    <input [(ngModel)]="user.user_name" placeholder="User Name" 
+    	name="user_name" class="form-control" id="user_name">
+  </div>
+
+  <div class="form-group">
+    <label for="contact_no">Contact No:</label>
+   	<input [(ngModel)]="user.contact_no" placeholder="Contact No" 
+		name="contact_no" class="form-control" id="contact_no">
+  </div>
+
+  <button class="btn btn-success" (click)="createUser()">Create</button>
+</form>
+</div>

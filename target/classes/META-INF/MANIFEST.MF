@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: pgh
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: niche0033
+Implementation-Vendor-Id: com.niche
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/pgh
+Created-By: Maven Integration for Eclipse
+
