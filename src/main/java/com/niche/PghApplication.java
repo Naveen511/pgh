@@ -29,6 +29,6 @@ public class PghApplication implements CommandLineRunner{
 	
 	@Override
 	public void run(String... args) throws Exception {
-		userRepository.save(new User("one", "one", null, null, 0));
+		userRepository.save(new User("one", "one", null, null, 0, null, null));
 	}
 }
