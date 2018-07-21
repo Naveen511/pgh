@@ -1,10 +1,13 @@
 package com.niche.model;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 /**
  * Used for entity creation.
@@ -21,8 +24,13 @@ public class User {
 	private String user_name;
 	private String email_id;
 	private int contact_no;
-	private Date created_at;
-	private Date updated_at;
+	
+	@CreationTimestamp
+	// private Date created_at;
+	private LocalDateTime created_at;
+	
+	@UpdateTimestamp
+	private LocalDateTime updated_at;
 	
 	public Long getId() {
 		return id;
@@ -60,16 +68,16 @@ public class User {
 	public void setContact_no(int contact_no) {
 		this.contact_no = contact_no;
 	}
-	public Date getCreated_at() {
+	public LocalDateTime getCreated_at() {
 		return created_at;
 	}
-	public void setCreated_at(Date created_at) {
+	public void setCreated_at(LocalDateTime created_at) {
 		this.created_at = created_at;
 	}
-	public Date getUpdated_at() {
+	public LocalDateTime getUpdated_at() {
 		return updated_at;
 	}
-	public void setUpdated_at(Date updated_at) {
+	public void setUpdated_at(LocalDateTime updated_at) {
 		this.updated_at = updated_at;
 	}
 	
@@ -77,14 +85,18 @@ public class User {
 		super();
 	}
 	
-	public User(String first_name, String last_name, String user_name, String email_id, int contact_no) {
+	public User(String first_name, String last_name, String user_name, String email_id, int contact_no, LocalDateTime created_at,
+			LocalDateTime updated_at) {
 		super();
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.user_name = user_name;
 		this.email_id = email_id;
 		this.contact_no = contact_no;
+		this.created_at = created_at;
+		this.updated_at = updated_at;
 	}
+	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", user_name=" + user_name
